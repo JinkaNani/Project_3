@@ -25,12 +25,12 @@ Insurance_model = pickle.load(open('Medical_insurance.sav', 'rb'))
 # sidebar for navigation
 with st.sidebar:
     
-    selected = option_menu('Multiple Disease Prediction System',
+    selected = option_menu('Personal Health Tool Kit',
                           
                           ['Medical insurance Prediction','Diabetes Prediction',
                            'Heart Disease Prediction',
                            'Parkinsons Prediction'],
-                          icons=['activity','activity','heart','person'],
+                          icons=['money','activity','heart','person'],
                           default_index=0)
     
 # Insurance Cost Prediction Page
