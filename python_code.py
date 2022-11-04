@@ -64,7 +64,6 @@ if (selected == 'Medical insurance Prediction'):
         region = st.text_input('region')
     
     
-    
     # code for Prediction
     insurance_cost = ''
     
@@ -73,12 +72,12 @@ if (selected == 'Medical insurance Prediction'):
     if st.button('Predict'):
         prediction = Insurance_model.predict([[age,sex,bmi,children,smoker,region]])
         
-        if (prediction[0] >100000):
-          insurance_cost = 'The Insurance Cost is High'
-        else:
-          insurance_cost = 'The Insurance Cost is Low'
+        #if (prediction[0] >100000):
+        # insurance_cost = 'The Insurance Cost is High'
+        #else:
+        #  insurance_cost = 'The Insurance Cost is Low'
         
-    st.success(insurance_cost)
+    st.success(prediction[0])
 
 
     
