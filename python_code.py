@@ -78,7 +78,7 @@ if (selected == 'Medical insurance Prediction'):
         #else:
         #  insurance_cost = 'The Insurance Cost is Low'
         
-    st.write('Below is a DataFrame:', prediction[0], 'Above is a dataframe.')
+    st.write('The above candidate will have to pay ', prediction[0], 'for his insurance')
 
 
     
