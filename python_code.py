@@ -30,7 +30,7 @@ with st.sidebar:
                           ['Medical insurance Prediction','Diabetes Prediction',
                            'Heart Disease Prediction',
                            'Parkinsons Prediction'],
-                          icons=['money','activity','heart','person'],
+                          icons=['cost','activity','heart','person'],
                           default_index=0)
     
 # Insurance Cost Prediction Page
