@@ -71,14 +71,14 @@ if (selected == 'Medical insurance Prediction'):
     # creating a button for Prediction
     
     if st.button('Predict'):
-        prediction = Insurance_model.predict([[age,sex,bmi,children,smoker,region]])
+        prediction= Insurance_model.predict([[age,sex,bmi,children,smoker,region]])
         
-        if (prediction[0] >100000):
-          insurance_cost = 'The Insurance Cost is High'
-        else:
-          insurance_cost = 'The Insurance Cost is Low'
+        #if (prediction[0] >100000):
+        #  insurance_cost = 'The Insurance Cost is High'
+        #else:
+        #  insurance_cost = 'The Insurance Cost is Low'
         
-    st.success(insurance_cost)
+    st.write('Below is a DataFrame:', prediction, 'Above is a dataframe.')
 
 
     
