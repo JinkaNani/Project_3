@@ -25,12 +25,12 @@ Insurance_model = pickle.load(open('Medical_insurance.sav', 'rb'))
 # sidebar for navigation
 with st.sidebar:
     
-    selected = option_menu('Personal Health Tool Kit',
+    selected = option_menu('Multiple Disease Prediction System',
                           
                           ['Medical insurance Prediction','Diabetes Prediction',
                            'Heart Disease Prediction',
                            'Parkinsons Prediction'],
-                          icons=['cost','activity','heart','person'],
+                          icons=['activity','activity','heart','person'],
                           default_index=0)
     
 # Insurance Cost Prediction Page
@@ -64,6 +64,7 @@ if (selected == 'Medical insurance Prediction'):
         region = st.text_input('region')
     
     
+    
     # code for Prediction
     insurance_cost = ''
     
@@ -72,12 +73,12 @@ if (selected == 'Medical insurance Prediction'):
     if st.button('Predict'):
         prediction = Insurance_model.predict([[age,sex,bmi,children,smoker,region]])
         
-        #if (prediction[0] >100000):
-        # insurance_cost = 'The Insurance Cost is High'
-        #else:
-        #  insurance_cost = 'The Insurance Cost is Low'
+        if (prediction[0] >100000):
+          insurance_cost = 'The Insurance Cost is High'
+        else:
+          insurance_cost = 'The Insurance Cost is Low'
         
-    st.success(prediction[0])
+    st.success(insurance_cost)
 
 
     
