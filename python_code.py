@@ -66,7 +66,7 @@ if (selected == 'Medical insurance Prediction'):
     
     
     # code for Prediction
-    insurance_cost = ''
+    #insurance_cost = ''
     
     # creating a button for Prediction
     
@@ -78,7 +78,7 @@ if (selected == 'Medical insurance Prediction'):
         #else:
         #  insurance_cost = 'The Insurance Cost is Low'
         
-    st.write('Below is a DataFrame:', prediction, 'Above is a dataframe.')
+    st.write('Below is a DataFrame:', prediction[0], 'Above is a dataframe.')
 
 
     
